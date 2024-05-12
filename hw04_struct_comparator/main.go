@@ -2,10 +2,14 @@ package main
 
 import "fmt"
 
-type ComparisonMode int
+type ComparisonMode struct {
+	ComparisonType ComparisonType
+}
+
+type ComparisonType int
 
 const (
-	ByYear ComparisonMode = iota
+	ByYear ComparisonType = iota
 	BySize
 	ByRate
 )
@@ -17,7 +21,35 @@ type Book struct {
 	year   int
 	size   int
 	rate   float64
-	mode   ComparisonMode
+}
+
+func NewComparisonMode(compareBy ComparisonType) *ComparisonMode {
+	return &ComparisonMode{
+		ComparisonType: compareBy,
+	}
+}
+
+func (c ComparisonMode) CompareBooks(book1, book2 *Book) bool {
+	switch c.ComparisonType {
+	case ByYear:
+		return book1.year > book2.year
+	case BySize:
+		return book1.size > book2.size
+	case ByRate:
+		return book1.rate > book2.rate
+	default:
+		return false
+	}
+}
+
+func NewBook(title string, author string, year int, size int, rate float64) *Book {
+	return &Book{
+		title:  title,
+		author: author,
+		year:   year,
+		size:   size,
+		rate:   rate,
+	}
 }
 
 func main() {
@@ -73,10 +105,12 @@ func main() {
 	fmt.Println("Rate:", myBook.rate)
 	fmt.Println("====================================================")
 
-	Book1 := NewBook("Book 1", "Author 1", 2020, 350, 4.2, BySize)
-	Book2 := NewBook("Book 2", "Author 2", 2021, 300, 4.0, BySize)
+	book1 := NewBook("Book 1", "Author 1", 2020, 350, 4.2)
+	book2 := NewBook("Book 2", "Author 2", 2021, 360, 4.0)
 
-	if Book1.IsGreaterThan(Book2) {
+	mode := NewComparisonMode(ByRate)
+
+	if mode.CompareBooks(book1, book2) {
 		fmt.Println("Book 1 is greater than Book 2")
 	} else {
 		fmt.Println("Book 2 is greater than Book 1")
@@ -129,28 +163,4 @@ func (b *Book) SetRate(newRate float64) {
 
 func (b *Book) GetRate() float64 {
 	return b.rate
-}
-
-func NewBook(title string, author string, year int, size int, rate float64, mode ComparisonMode) *Book {
-	return &Book{
-		title:  title,
-		author: author,
-		year:   year,
-		size:   size,
-		rate:   rate,
-		mode:   mode,
-	}
-}
-
-func (b *Book) IsGreaterThan(other *Book) bool {
-	switch b.mode {
-	case ByYear:
-		return b.year > other.year
-	case BySize:
-		return b.size > other.size
-	case ByRate:
-		return b.rate > other.rate
-	default:
-		return false
-	}
 }
