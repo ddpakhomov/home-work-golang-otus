@@ -16,7 +16,7 @@ type Circle struct {
 
 func (c Circle) CalculateArea() (float64, error) {
 	if c.Radius <= 0 {
-		return 0, fmt.Errorf("переданный объект не является фигурой")
+		return 0, fmt.Errorf("некорректный радиус для круга")
 	}
 	return math.Pi * c.Radius * c.Radius, nil
 }
@@ -28,7 +28,7 @@ type Rectangle struct {
 
 func (r Rectangle) CalculateArea() (float64, error) {
 	if r.Width <= 0 || r.Height <= 0 {
-		return 0, errors.New("переданный объект не является фигурой")
+		return 0, errors.New("некорректные стороны для прямоугольника")
 	}
 	return r.Width * r.Height, nil
 }
@@ -40,7 +40,7 @@ type Triangle struct {
 
 func (t Triangle) CalculateArea() (float64, error) {
 	if t.Base <= 0 || t.Height <= 0 {
-		return 0, errors.New("переданный объект не является фигурой")
+		return 0, errors.New("некорректные значения для основания или высоты треугольника")
 	}
 	return 0.5 * t.Base * t.Height, nil
 }
@@ -79,6 +79,12 @@ func main() {
 		fmt.Printf("Треугольник: основание %.f, высота %.f\n", triangle.Base, triangle.Height)
 		fmt.Printf("Площадь: %.f\n", areaTriangle)
 	} else {
+		fmt.Println("Ошибка:", err)
+	}
+
+	randomObject := "неизвестный объект"
+	_, err = calculateArea(randomObject)
+	if err != nil {
 		fmt.Println("Ошибка:", err)
 	}
 
