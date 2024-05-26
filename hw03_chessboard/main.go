@@ -2,24 +2,27 @@ package main
 
 import "fmt"
 
-func printChessboard(size int) {
+func getChessboard(size int) string {
+	chessboard := ""
 	for i := 0; i < size; i++ {
 		for j := 0; j < size; j++ {
 			if (i+j)%2 == 0 {
-				fmt.Print("# ")
+				chessboard += "# "
 			} else {
-				fmt.Print("  ")
+				chessboard += "  "
 			}
 		}
-		fmt.Println()
+		chessboard += "\n"
 	}
+	return chessboard
 }
 
 func main() {
 	fmt.Println("Пример шахмотной доски 8х8")
-	size := 8
+	size := 3
 
-	printChessboard(size)
+	chessboard := getChessboard(size)
+	fmt.Println(chessboard)
 
 	fmt.Println("Можно создать доску любого размера, введите размер доски: ")
 	_, err := fmt.Scanf("%d", &size)
@@ -28,5 +31,6 @@ func main() {
 		return
 	}
 
-	printChessboard(size)
+	chessboard = getChessboard(size)
+	fmt.Println(chessboard)
 }
