@@ -7,18 +7,26 @@ import (
 )
 
 type Shape interface {
-	CalculateArea() (float64, error)
+	CalculateArea() float64
 }
 
 type Circle struct {
 	Radius float64
 }
 
-func (c Circle) CalculateArea() (float64, error) {
-	if c.Radius <= 0 {
-		return 0, fmt.Errorf("некорректный радиус для круга")
+func (c Circle) CalculateArea() float64 {
+	return math.Pi * c.Radius * c.Radius
+}
+
+func NewCircle(r float64) (*Circle, error) {
+	if r <= 0 {
+		return nil, errors.New("некорректный радиус для круга")
 	}
-	return math.Pi * c.Radius * c.Radius, nil
+
+	fmt.Printf("Круг: радиус %.f\n", r)
+	return &Circle{
+		Radius: r,
+	}, nil
 }
 
 type Rectangle struct {
@@ -26,11 +34,20 @@ type Rectangle struct {
 	Height float64
 }
 
-func (r Rectangle) CalculateArea() (float64, error) {
-	if r.Width <= 0 || r.Height <= 0 {
-		return 0, errors.New("некорректные стороны для прямоугольника")
+func (r Rectangle) CalculateArea() float64 {
+	return r.Width * r.Height
+}
+
+func NewRectangle(w, h float64) (*Rectangle, error) {
+	if w <= 0 || h <= 0 {
+		return nil, errors.New("некорректные стороны для прямоугольника")
 	}
-	return r.Width * r.Height, nil
+
+	fmt.Printf("Прямоугольник: ширина %.f, высота %.f\n", w, h)
+	return &Rectangle{
+		Width:  w,
+		Height: h,
+	}, nil
 }
 
 type Triangle struct {
@@ -38,11 +55,22 @@ type Triangle struct {
 	Height float64
 }
 
-func (t Triangle) CalculateArea() (float64, error) {
-	if t.Base <= 0 || t.Height <= 0 {
-		return 0, errors.New("некорректные значения для основания или высоты треугольника")
+func (t Triangle) CalculateArea() float64 {
+	area := 0.5 * t.Base * t.Height
+
+	return area
+}
+
+func NewTriangle(b, h float64) (*Triangle, error) {
+	if b <= 0 || h <= 0 {
+		return nil, errors.New("некорректные стороны для треугольника")
 	}
-	return 0.5 * t.Base * t.Height, nil
+
+	fmt.Printf("Треугольник: основание %.f, высота %.f\n", b, h)
+	return &Triangle{
+		Base:   b,
+		Height: h,
+	}, nil
 }
 
 func calculateArea(s any) (float64, error) {
@@ -51,32 +79,41 @@ func calculateArea(s any) (float64, error) {
 		return 0, errors.New("переданный объект не является фигурой")
 	}
 
-	return shape.CalculateArea()
+	return shape.CalculateArea(), nil
 }
 
 func main() {
-	circle := Circle{5}
+	circle, err := NewCircle(5)
+	if err != nil {
+		fmt.Println("Ошибка при создании круга:", err)
+	}
+
 	areaCircle, err := calculateArea(circle)
 	if err == nil {
-		fmt.Printf("Круг: радиус %.f\n", circle.Radius)
 		fmt.Printf("Площадь: %.14f\n", areaCircle)
 	} else {
 		fmt.Println("Ошибка:", err)
 	}
 
-	rectangle := Rectangle{10, 5}
+	rectangle, err := NewRectangle(10, 5)
+	if err != nil {
+		fmt.Println("Ошибка при создании прямоугольника", err)
+	}
+
 	areaRectangle, err := calculateArea(rectangle)
 	if err == nil {
-		fmt.Printf("Прямоугольник: ширина %.f, высота %.f\n", rectangle.Width, rectangle.Height)
 		fmt.Printf("Площадь: %.f\n", areaRectangle)
 	} else {
 		fmt.Println("Ошибка:", err)
 	}
 
-	triangle := Triangle{8, 6}
+	triangle, err := NewTriangle(8, 6)
+	if err != nil {
+		fmt.Println("Ошибка при создании треугольника", err)
+	}
+
 	areaTriangle, err := calculateArea(triangle)
 	if err == nil {
-		fmt.Printf("Треугольник: основание %.f, высота %.f\n", triangle.Base, triangle.Height)
 		fmt.Printf("Площадь: %.f\n", areaTriangle)
 	} else {
 		fmt.Println("Ошибка:", err)
@@ -85,15 +122,6 @@ func main() {
 	randomObject := "неизвестный объект"
 	_, err = calculateArea(randomObject)
 	if err != nil {
-		fmt.Println("Ошибка:", err)
-	}
-
-	circle = Circle{0}
-	areaCircle, err = calculateArea(circle)
-	if err == nil {
-		fmt.Printf("Круг: радиус %.f\n", circle.Radius)
-		fmt.Printf("Площадь: %.14f\n", areaCircle)
-	} else {
 		fmt.Println("Ошибка:", err)
 	}
 }
