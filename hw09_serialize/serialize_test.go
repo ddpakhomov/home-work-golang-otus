@@ -4,8 +4,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
+	"github.com/ddpakhomov/home-work-golang-otus/hw09_serialize/pb"
 	"github.com/stretchr/testify/assert"
+	"google.golang.org/protobuf/proto"
 )
 
 func TestSerializeBooksToJSON(t *testing.T) {
@@ -42,8 +43,8 @@ func TestDeserializeBooksFromJSON(t *testing.T) {
 }
 
 func TestProtoSerialization(t *testing.T) {
-	book := &Book{
-		ID:     1,
+	protoBook := &pb.Book{
+		Id:     1,
 		Title:  "Hello Proto",
 		Author: "Ivan Ivanov",
 		Year:   2025,
@@ -51,14 +52,14 @@ func TestProtoSerialization(t *testing.T) {
 		Rate:   4.5,
 	}
 
-	data, err := proto.Marshal(book)
+	data, err := proto.Marshal(protoBook)
 	assert.NoError(t, err, "Expected no error during Proto serialization")
 	assert.NotNil(t, data, "Expected non-nil Proto data")
 
-	newBook := &Book{}
+	newBook := new(pb.Book)
 	err = proto.Unmarshal(data, newBook)
 	assert.NoError(t, err, "Expected no error during Proto deserialization")
-	assert.Equal(t, book, newBook, "Expected deserialized book to match original")
+	assertProtoBooksEqual(t, protoBook, newBook)
 }
 
 func TestJSONSerialization(t *testing.T) {
@@ -79,4 +80,14 @@ func TestJSONSerialization(t *testing.T) {
 	err = json.Unmarshal(jsonData, &newBook)
 	assert.NoError(t, err, "Expected no error during JSON deserialization")
 	assert.Equal(t, *book, newBook, "Expected deserialized book to match original")
+}
+
+func assertProtoBooksEqual(t *testing.T, expected, actual *pb.Book) {
+	t.Helper() // This will mark this function as a test helper
+	assert.Equal(t, expected.Id, actual.Id, "Expected ID to match")
+	assert.Equal(t, expected.Title, actual.Title, "Expected Title to match")
+	assert.Equal(t, expected.Author, actual.Author, "Expected Author to match")
+	assert.Equal(t, expected.Year, actual.Year, "Expected Year to match")
+	assert.Equal(t, expected.Size, actual.Size, "Expected Size to match")
+	assert.Equal(t, expected.Rate, actual.Rate, "Expected Rate to match")
 }
