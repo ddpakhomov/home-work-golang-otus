@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/golang/protobuf/proto"
+	"github.com/ddpakhomov/home-work-golang-otus/hw09_serialize/pb"
+	"google.golang.org/protobuf/proto"
 )
 
 type Book struct {
@@ -40,7 +41,8 @@ func (b *Book) Reset() {
 }
 
 func (b *Book) String() string {
-	return proto.CompactTextString(b)
+	return fmt.Sprintf("Book{ID: %d, Title: %s, Author: %s, Year: %d, Size: %d, Rate: %.2f}",
+		b.ID, b.Title, b.Author, b.Year, b.Size, b.Rate)
 }
 
 func (b *Book) ProtoMessage() {}
@@ -84,12 +86,21 @@ func main() {
 	}
 	fmt.Printf("Unmarshaled Book: %+v\n", unmarshaledBook)
 
-	data, err := proto.Marshal(book)
+	protoBook := &pb.Book{
+		Id:     1,
+		Title:  "Hello Proto",
+		Author: "Ivan Ivanov",
+		Year:   2025,
+		Size:   218,
+		Rate:   4.5,
+	}
+
+	data, err := proto.Marshal(protoBook)
 	if err != nil {
 		fmt.Println("Marshaling error:", err)
 	}
 
-	newBook := &Book{}
+	newBook := new(pb.Book)
 	err = proto.Unmarshal(data, newBook)
 	if err != nil {
 		fmt.Println("Unmarshaling error:", err)
