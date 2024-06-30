@@ -10,11 +10,18 @@ import (
 func SensorReadings() <-chan int {
 	c := make(chan int)
 	go func() {
+		max := big.NewInt(100)
+		timer := time.After(time.Minute)
 		for {
-			max := big.NewInt(100)
-			randNum, _ := rand.Int(rand.Reader, max)
-			c <- int(randNum.Int64())
-			time.Sleep(time.Millisecond * 600)
+			select {
+			case <-timer:
+				close(c)
+				return
+			default:
+				randNum, _ := rand.Int(rand.Reader, max)
+				c <- int(randNum.Int64())
+				time.Sleep(time.Millisecond * 600)
+			}
 		}
 	}()
 	return c
@@ -34,6 +41,7 @@ func ProcessReadings(c <-chan int) <-chan float64 {
 				count = 0
 			}
 		}
+		close(processed)
 	}()
 	return processed
 }
@@ -42,12 +50,7 @@ func main() {
 	readings := SensorReadings()
 	processed := ProcessReadings(readings)
 
-	startTime := time.Now()
-	iterations := 0
-
-	for time.Since(startTime) < time.Minute {
-		fmt.Println(<-processed)
-		iterations++
+	for p := range processed {
+		fmt.Println(p)
 	}
-	fmt.Println("Минута прошла. Количество выполненных итераций:", iterations)
 }
