@@ -1,8 +1,9 @@
 package main
 
 import (
+	"crypto/rand"
 	"fmt"
-	"math/rand"
+	"math/big"
 	"time"
 )
 
@@ -10,7 +11,9 @@ func SensorReadings() <-chan int {
 	c := make(chan int)
 	go func() {
 		for {
-			c <- rand.Intn(100)
+			max := big.NewInt(100)
+			randNum, _ := rand.Int(rand.Reader, max)
+			c <- int(randNum.Int64())
 			time.Sleep(time.Millisecond * 600)
 		}
 	}()
