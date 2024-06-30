@@ -17,9 +17,12 @@ func SensorReadings() <-chan int {
 			case <-timer:
 				close(c)
 				return
-			default:
-				randNum, _ := rand.Int(rand.Reader, max)
-				c <- int(randNum.Int64())
+			case c <- func() int {
+				if randNum, err := rand.Int(rand.Reader, max); err == nil {
+					return int(randNum.Int64())
+				}
+				return 0
+			}():
 				time.Sleep(time.Millisecond * 600)
 			}
 		}
