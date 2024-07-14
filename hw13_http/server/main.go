@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"time"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -33,7 +34,16 @@ func main() {
 	http.HandleFunc("/", handler)
 	serverAddr := fmt.Sprintf("%s:%d", *addr, *port)
 	fmt.Printf("Starting server on %s\n", serverAddr)
-	if err := http.ListenAndServe(serverAddr, nil); err != nil {
+
+	server := &http.Server{
+		Addr:         serverAddr,
+		Handler:      nil,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+		IdleTimeout:  15 * time.Second,
+	}
+
+	if err := server.ListenAndServe(); err != nil {
 		fmt.Printf("Error starting server: %v\n", err)
 	}
 }

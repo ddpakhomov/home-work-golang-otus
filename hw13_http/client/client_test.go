@@ -2,14 +2,15 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 )
 
-func TestSendGetRequest(t *testing.T) {
-	handler := func(w http.ResponseWriter, r *http.Request) {
+func TestClientSendGetRequest(t *testing.T) {
+	handler := func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("Hello, this is a GET response!"))
 	}
@@ -17,7 +18,14 @@ func TestSendGetRequest(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(handler))
 	defer server.Close()
 
-	resp, err := http.Get(server.URL)
+	ctx := context.Background()
+	req, err := http.NewRequestWithContext(ctx, "GET", server.URL, nil)
+	if err != nil {
+		t.Fatalf("Error creating GET request: %v", err)
+	}
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
 	if err != nil {
 		t.Fatalf("Error making GET request: %v", err)
 	}
@@ -34,8 +42,8 @@ func TestSendGetRequest(t *testing.T) {
 	}
 }
 
-func TestSendPostRequest(t *testing.T) {
-	handler := func(w http.ResponseWriter, r *http.Request) {
+func TestClientSendPostRequest(t *testing.T) {
+	handler := func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("Hello, this is a POST response!"))
 	}
@@ -43,7 +51,15 @@ func TestSendPostRequest(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(handler))
 	defer server.Close()
 
-	resp, err := http.Post(server.URL, "text/plain", bytes.NewBufferString("Sample data"))
+	ctx := context.Background()
+	req, err := http.NewRequestWithContext(ctx, "POST", server.URL, bytes.NewBufferString("Sample data"))
+	if err != nil {
+		t.Fatalf("Error creating POST request: %v", err)
+	}
+	req.Header.Set("Content-Type", "text/plain")
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
 	if err != nil {
 		t.Fatalf("Error making POST request: %v", err)
 	}
