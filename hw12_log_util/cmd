@@ -1,0 +1,3 @@
+go run main.go -file example.log
+go run main.go -file example.log -level ERROR
+go run main.go -file example.log -level WARNING -output output.txt

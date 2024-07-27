@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  postgres-otus:
+    image: postgres:16.2-alpine
+    container_name: postgres-otus
+    environment:
+      POSTGRES_DB: "postgres-otus"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: ""
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - .data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
