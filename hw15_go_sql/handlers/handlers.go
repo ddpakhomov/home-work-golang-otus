@@ -59,7 +59,7 @@ func (h *Handler) OrdersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (h *Handler) getUsers(w http.ResponseWriter, r *http.Request) {
+func (h *Handler) getUsers(w http.ResponseWriter, _ *http.Request) {
 	users, err := h.db.GetUsers()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -117,7 +117,7 @@ func (h *Handler) deleteUser(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func (h *Handler) getProducts(w http.ResponseWriter, r *http.Request) {
+func (h *Handler) getProducts(w http.ResponseWriter, _ *http.Request) {
 	products, err := h.db.GetProducts()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
