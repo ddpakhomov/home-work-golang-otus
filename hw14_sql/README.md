@@ -139,6 +139,10 @@ SELECT * FROM Users;
 SELECT * FROM Products;
 ```
 
+```sql
+SELECT * FROM OrderProducts;
+```
+
 ### Запрос на выборку заказов по пользователю
 
 ```sql
