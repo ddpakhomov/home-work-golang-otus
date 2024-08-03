@@ -135,7 +135,6 @@ func (db *DB) DeleteOrder(orderID int) error {
 		tx.Rollback()
 		return err
 	}
-
 	return tx.Commit()
 }
 
@@ -154,7 +153,6 @@ func (db *DB) GetOrdersByUser(userID int) ([]Order, error) {
 		}
 		orders = append(orders, order)
 	}
-
 	return orders, nil
 }
 
