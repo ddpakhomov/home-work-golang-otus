@@ -186,10 +186,10 @@ func (h *Handler) getOrders(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) createOrder(w http.ResponseWriter, r *http.Request) {
 	var order struct {
-		UserID        int               `json:"user_id"`
-		OrderDate     string            `json:"order_date"`
-		TotalAmount   float64           `json:"total_amount"`
-		OrderProducts []db.OrderProduct `json:"order_products"`
+		UserID        int               `json:"userId"`
+		OrderDate     string            `json:"orderDate"`
+		TotalAmount   float64           `json:"totalAmount"`
+		OrderProducts []db.OrderProduct `json:"orderProducts"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&order); err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
