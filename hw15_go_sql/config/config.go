@@ -20,12 +20,14 @@ type DatabaseConfig struct {
 func LoadConfig(path string) (*Config, error) {
 	viper.SetConfigFile(path)
 
-	if err := viper.ReadInConfig(); err != nil {
+	err := viper.ReadInConfig()
+	if err != nil {
 		return nil, err
 	}
 
 	var cfg Config
-	if err := viper.Unmarshal(&cfg); err != nil {
+	err = viper.Unmarshal(&cfg)
+	if err != nil {
 		return nil, err
 	}
 

@@ -70,11 +70,13 @@ func (h *Handler) getUsers(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) createUser(w http.ResponseWriter, r *http.Request) {
 	var user db.User
-	if err := json.NewDecoder(r.Body).Decode(&user); err != nil {
+	err := json.NewDecoder(r.Body).Decode(&user)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if err := h.db.InsertUser(user.Name, user.Email, user.Password); err != nil {
+	err = h.db.InsertUser(user.Name, user.Email, user.Password)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -83,11 +85,13 @@ func (h *Handler) createUser(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) updateUser(w http.ResponseWriter, r *http.Request) {
 	var user db.User
-	if err := json.NewDecoder(r.Body).Decode(&user); err != nil {
+	err := json.NewDecoder(r.Body).Decode(&user)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if err := h.db.UpdateUser(user.ID, user.Name, user.Email); err != nil {
+	err = h.db.UpdateUser(user.ID, user.Name, user.Email)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -105,7 +109,8 @@ func (h *Handler) deleteUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid id parameter", http.StatusBadRequest)
 		return
 	}
-	if err := h.db.DeleteUser(id); err != nil {
+	err = h.db.DeleteUser(id)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -123,11 +128,13 @@ func (h *Handler) getProducts(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) createProduct(w http.ResponseWriter, r *http.Request) {
 	var product db.Product
-	if err := json.NewDecoder(r.Body).Decode(&product); err != nil {
+	err := json.NewDecoder(r.Body).Decode(&product)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if err := h.db.InsertProduct(product.Name, product.Price); err != nil {
+	err = h.db.InsertProduct(product.Name, product.Price)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -136,11 +143,13 @@ func (h *Handler) createProduct(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) updateProduct(w http.ResponseWriter, r *http.Request) {
 	var product db.Product
-	if err := json.NewDecoder(r.Body).Decode(&product); err != nil {
+	err := json.NewDecoder(r.Body).Decode(&product)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if err := h.db.UpdateProduct(product.ID, product.Name, product.Price); err != nil {
+	err = h.db.UpdateProduct(product.ID, product.Name, product.Price)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -158,7 +167,8 @@ func (h *Handler) deleteProduct(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid id parameter", http.StatusBadRequest)
 		return
 	}
-	if err := h.db.DeleteProduct(id); err != nil {
+	err = h.db.DeleteProduct(id)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -191,11 +201,13 @@ func (h *Handler) createOrder(w http.ResponseWriter, r *http.Request) {
 		TotalAmount   float64           `json:"totalAmount"`
 		OrderProducts []db.OrderProduct `json:"orderProducts"`
 	}
-	if err := json.NewDecoder(r.Body).Decode(&order); err != nil {
+	err := json.NewDecoder(r.Body).Decode(&order)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if err := h.db.InsertOrder(order.UserID, order.OrderDate, order.TotalAmount, order.OrderProducts); err != nil {
+	err = h.db.InsertOrder(order.UserID, order.OrderDate, order.TotalAmount, order.OrderProducts)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
@@ -213,7 +225,8 @@ func (h *Handler) deleteOrder(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid id parameter", http.StatusBadRequest)
 		return
 	}
-	if err := h.db.DeleteOrder(id); err != nil {
+	err = h.db.DeleteOrder(id)
+	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

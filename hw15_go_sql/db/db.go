@@ -102,17 +102,19 @@ func (db *DB) InsertOrder(userID int, orderDate string, totalAmount float64, ord
 	}
 
 	var orderID int
-	if err := tx.QueryRow("INSERT INTO Orders (user_id, order_date, total_amount) VALUES ($1, $2, $3) RETURNING id",
-		userID, orderDate, totalAmount).Scan(&orderID); err != nil {
+	err = tx.QueryRow("INSERT INTO Orders (user_id, order_date, total_amount) VALUES ($1, $2, $3) RETURNING id",
+		userID, orderDate, totalAmount).Scan(&orderID)
+	if err != nil {
 		tx.Rollback()
 		return err
 	}
 
 	for _, op := range orderProducts {
-		if _, err := tx.Exec("INSERT INTO OrderProducts (order_id, product_id, quantity) VALUES ($1, $2, $3)",
-			orderID, op.ProductID, op.Quantity); err != nil {
+		_, execErr := tx.Exec("INSERT INTO OrderProducts (order_id, product_id, quantity) VALUES ($1, $2, $3)",
+			orderID, op.ProductID, op.Quantity)
+		if execErr != nil {
 			tx.Rollback()
-			return err
+			return execErr
 		}
 	}
 
@@ -125,14 +127,16 @@ func (db *DB) DeleteOrder(orderID int) error {
 		return err
 	}
 
-	if _, err := tx.Exec("DELETE FROM OrderProducts WHERE order_id = $1", orderID); err != nil {
+	_, execErr := tx.Exec("DELETE FROM OrderProducts WHERE order_id = $1", orderID)
+	if execErr != nil {
 		tx.Rollback()
-		return err
+		return execErr
 	}
 
-	if _, err := tx.Exec("DELETE FROM Orders WHERE id = $1", orderID); err != nil {
+	_, execErr = tx.Exec("DELETE FROM Orders WHERE id = $1", orderID)
+	if execErr != nil {
 		tx.Rollback()
-		return err
+		return execErr
 	}
 	return tx.Commit()
 }
