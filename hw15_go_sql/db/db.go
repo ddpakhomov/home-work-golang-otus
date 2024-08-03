@@ -101,14 +101,16 @@ func (db *DB) InsertOrder(userID int, orderDate string, totalAmount float64, ord
 	}
 
 	var orderID int
-	err = tx.QueryRow("INSERT INTO Orders (user_id, order_date, total_amount) VALUES ($1, $2, $3) RETURNING id", userID, orderDate, totalAmount).Scan(&orderID)
+	err = tx.QueryRow("INSERT INTO Orders (user_id, order_date, total_amount) VALUES ($1, $2, $3) RETURNING id",
+		userID, orderDate, totalAmount).Scan(&orderID)
 	if err != nil {
 		tx.Rollback()
 		return err
 	}
 
 	for _, op := range orderProducts {
-		_, err = tx.Exec("INSERT INTO OrderProducts (order_id, product_id, quantity) VALUES ($1, $2, $3)", orderID, op.ProductID, op.Quantity)
+		_, err = tx.Exec("INSERT INTO OrderProducts (order_id, product_id, quantity) VALUES ($1, $2, $3)",
+			orderID, op.ProductID, op.Quantity)
 		if err != nil {
 			tx.Rollback()
 			return err
