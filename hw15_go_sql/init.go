@@ -15,7 +15,6 @@ func InitDB() (*db.DB, error) {
 		return nil, fmt.Errorf("error loading config: %w", err)
 	}
 
-	// Подключение к базе данных
 	connStr := fmt.Sprintf(
 		"user=%s password=%s dbname=%s host=%s port=%d sslmode=%s",
 		cfg.Database.User,

@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	// Подключение к базе данных и загрузка конфигурации
 	database, err := InitDB()
 	if err != nil {
 		log.Fatalf("Error initializing database: %v", err)
@@ -21,14 +20,12 @@ func main() {
 		}
 	}()
 
-	// Инициализация HTTP-хендлеров
 	handler := handlers.NewHandler(database)
 
 	http.HandleFunc("/users", handler.UsersHandler)
 	http.HandleFunc("/products", handler.ProductsHandler)
 	http.HandleFunc("/orders", handler.OrdersHandler)
 
-	// Настройка HTTP-сервера с таймаутами
 	server := &http.Server{
 		Addr:         ":8080",
 		Handler:      nil,
@@ -37,20 +34,17 @@ func main() {
 		IdleTimeout:  15 * time.Second,
 	}
 
-	// Канал для передачи ошибки
 	errCh := make(chan error, 1)
 
 	go func() {
 		errCh <- server.ListenAndServe()
 	}()
 
-	// Проверка ошибки
 	srvErr := <-errCh
 	if srvErr != nil && !errors.Is(srvErr, http.ErrServerClosed) {
 		log.Printf("Error starting server: %v", srvErr)
 	}
 
-	// Завершение программы после выполнения всех defer
 	if srvErr != nil {
 		log.Printf("Server error: %v", srvErr)
 	}

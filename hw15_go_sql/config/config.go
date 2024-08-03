@@ -4,12 +4,10 @@ import (
 	"github.com/spf13/viper"
 )
 
-// Config структура для хранения конфигурации
 type Config struct {
 	Database DatabaseConfig
 }
 
-// DatabaseConfig структура для хранения конфигурации базы данных
 type DatabaseConfig struct {
 	User     string
 	Password string
@@ -19,7 +17,6 @@ type DatabaseConfig struct {
 	SSLMode  string
 }
 
-// LoadConfig загружает конфигурацию из файла
 func LoadConfig(path string) (*Config, error) {
 	viper.SetConfigFile(path)
 

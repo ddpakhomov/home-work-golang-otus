@@ -5,12 +5,10 @@ import (
 	_ "github.com/lib/pq"
 )
 
-// DB структура для работы с базой данных
 type DB struct {
 	conn *sql.DB
 }
 
-// NewDB создает новое подключение к базе данных
 func NewDB(connStr string) (*DB, error) {
 	conn, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -24,30 +22,25 @@ func NewDB(connStr string) (*DB, error) {
 	return &DB{conn: conn}, nil
 }
 
-// Close закрывает подключение к базе данных
 func (db *DB) Close() error {
 	return db.conn.Close()
 }
 
-// InsertUser добавляет нового пользователя в базу данных
 func (db *DB) InsertUser(name, email, password string) error {
 	_, err := db.conn.Exec("INSERT INTO Users (name, email, password) VALUES ($1, $2, $3)", name, email, password)
 	return err
 }
 
-// UpdateUser обновляет данные пользователя в базе данных
 func (db *DB) UpdateUser(id int, name, email string) error {
 	_, err := db.conn.Exec("UPDATE Users SET name = $1, email = $2 WHERE id = $3", name, email, id)
 	return err
 }
 
-// DeleteUser удаляет пользователя из базы данных
 func (db *DB) DeleteUser(id int) error {
 	_, err := db.conn.Exec("DELETE FROM Users WHERE id = $1", id)
 	return err
 }
 
-// GetUsers возвращает список всех пользователей
 func (db *DB) GetUsers() ([]User, error) {
 	rows, err := db.conn.Query("SELECT id, name, email, password FROM Users")
 	if err != nil {
@@ -67,25 +60,21 @@ func (db *DB) GetUsers() ([]User, error) {
 	return users, nil
 }
 
-// InsertProduct добавляет новый продукт в базу данных
 func (db *DB) InsertProduct(name string, price float64) error {
 	_, err := db.conn.Exec("INSERT INTO Products (name, price) VALUES ($1, $2)", name, price)
 	return err
 }
 
-// UpdateProduct обновляет данные продукта в базе данных
 func (db *DB) UpdateProduct(id int, name string, price float64) error {
 	_, err := db.conn.Exec("UPDATE Products SET name = $1, price = $2 WHERE id = $3", name, price, id)
 	return err
 }
 
-// DeleteProduct удаляет продукт из базы данных
 func (db *DB) DeleteProduct(id int) error {
 	_, err := db.conn.Exec("DELETE FROM Products WHERE id = $1", id)
 	return err
 }
 
-// GetProducts возвращает список всех продуктов
 func (db *DB) GetProducts() ([]Product, error) {
 	rows, err := db.conn.Query("SELECT id, name, price FROM Products")
 	if err != nil {
@@ -105,7 +94,6 @@ func (db *DB) GetProducts() ([]Product, error) {
 	return products, nil
 }
 
-// InsertOrder добавляет новый заказ в базу данных
 func (db *DB) InsertOrder(userID int, orderDate string, totalAmount float64, orderProducts []OrderProduct) error {
 	tx, err := db.conn.Begin()
 	if err != nil {
@@ -130,7 +118,6 @@ func (db *DB) InsertOrder(userID int, orderDate string, totalAmount float64, ord
 	return tx.Commit()
 }
 
-// DeleteOrder удаляет заказ из базы данных
 func (db *DB) DeleteOrder(orderID int) error {
 	tx, err := db.conn.Begin()
 	if err != nil {
@@ -152,7 +139,6 @@ func (db *DB) DeleteOrder(orderID int) error {
 	return tx.Commit()
 }
 
-// GetOrdersByUser возвращает список заказов для конкретного пользователя
 func (db *DB) GetOrdersByUser(userID int) ([]Order, error) {
 	rows, err := db.conn.Query("SELECT id, order_date, total_amount FROM Orders WHERE user_id = $1", userID)
 	if err != nil {
@@ -172,7 +158,6 @@ func (db *DB) GetOrdersByUser(userID int) ([]Order, error) {
 	return orders, nil
 }
 
-// GetUserStatistics возвращает статистику по пользователю
 func (db *DB) GetUserStatistics(userID int) (UserStatistics, error) {
 	var stats UserStatistics
 	err := db.conn.QueryRow(`
@@ -196,7 +181,6 @@ func (db *DB) GetUserStatistics(userID int) (UserStatistics, error) {
 	return stats, nil
 }
 
-// CreateIndexes создает индексы для ускорения выборки
 func (db *DB) CreateIndexes() error {
 	_, err := db.conn.Exec(`
                 CREATE INDEX IF NOT EXISTS idx_users_email ON Users(email);
@@ -207,7 +191,6 @@ func (db *DB) CreateIndexes() error {
 	return err
 }
 
-// Структуры для представления данных
 type User struct {
 	ID       int
 	Name     string
