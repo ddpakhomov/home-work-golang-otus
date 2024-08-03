@@ -2,7 +2,8 @@ package db
 
 import (
 	"database/sql"
-	_ "github.com/lib/pq"
+
+	_ "github.com/lib/pq" // PostgreSQL driver
 )
 
 type DB struct {
