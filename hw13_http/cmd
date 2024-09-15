@@ -1,0 +1,6 @@
+ #server
+ go run main.go --addr localhost --port 8000
+
+ #client
+ go run main.go --method GET --url http://localhost:8000
+ go run main.go --method POST --url http://localhost:8000 --data "Sample data"

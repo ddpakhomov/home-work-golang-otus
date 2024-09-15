@@ -27,7 +27,6 @@ Thumbs.db
 .vscode/
 *.bak
 
-
-
 practice/
-go.work.sum
+**/config.yml
+**/.data/

@@ -1,0 +1,7 @@
+database:
+  user: ""
+  password: ""
+  dbname: ""
+  host: ""
+  port: 5432
+  sslmode: "disable"
