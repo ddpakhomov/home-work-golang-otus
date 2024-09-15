@@ -1,0 +1,5 @@
+mongodb:
+  uri: "mongodb://login:password@localhost:27017/"
+  database: "training"
+  collection: "term"
+  num_documents: 5

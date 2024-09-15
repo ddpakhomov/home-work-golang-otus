@@ -1,0 +1,2646 @@
+[{
+  "_id": {
+    "$oid": "66a6873d09d337e9ca049ab3"
+  },
+  "term": "a",
+  "name": "append",
+  "description": "режим вставки, ввод текста сразу после позиции курсора",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee3002118"
+  },
+  "term": "i",
+  "name": "insert",
+  "description": "режим вставки, ввод текста перед позицией курсора",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee3002119"
+  },
+  "term": "dd",
+  "name": "delete line",
+  "description": "удаляет текущую строку",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee300211a"
+  },
+  "term": "yy",
+  "name": "yank line",
+  "description": "копирует текущую строку",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee300211b"
+  },
+  "term": "p",
+  "name": "paste",
+  "description": "вставляет содержимое буфера после позиции курсора",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee300211c"
+  },
+  "term": ":w",
+  "name": "write",
+  "description": "сохраняет текущий файл",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee300211d"
+  },
+  "term": ":q",
+  "name": "quit",
+  "description": "выходит из Vim",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a6880bd228da4ee300211e"
+  },
+  "term": ":wq",
+  "name": "write and quit",
+  "description": "сохраняет текущий файл и выходит из Vim",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee300211f"
+  },
+  "term": "v",
+  "name": "visual mode",
+  "description": "переход в визуальный режим",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002120"
+  },
+  "term": "u",
+  "name": "undo",
+  "description": "отмена последнего действия",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002121"
+  },
+  "term": "Ctrl+r",
+  "name": "redo",
+  "description": "повтор последнего отменённого действия",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002122"
+  },
+  "term": ":e",
+  "name": "edit",
+  "description": "открывает файл для редактирования",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002123"
+  },
+  "term": ":help",
+  "name": "help",
+  "description": "открывает справку по командам Vim",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002124"
+  },
+  "term": "gg",
+  "name": "go to top",
+  "description": "переход к началу файла",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002125"
+  },
+  "term": "G",
+  "name": "go to bottom",
+  "description": "переход к концу файла",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002126"
+  },
+  "term": "o",
+  "name": "open new line below",
+  "description": "открывает новую строку ниже текущей и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002127"
+  },
+  "term": "O",
+  "name": "open new line above",
+  "description": "открывает новую строку выше текущей и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002128"
+  },
+  "term": "x",
+  "name": "delete character",
+  "description": "удаляет символ под курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee3002129"
+  },
+  "term": ":set nu",
+  "name": "show line numbers",
+  "description": "включает отображение номеров строк",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68889d228da4ee300212a"
+  },
+  "term": ":set nonu",
+  "name": "hide line numbers",
+  "description": "выключает отображение номеров строк",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5b09d337e9ca049ab4"
+  },
+  "term": "cw",
+  "name": "change word",
+  "description": "заменяет слово под курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5b09d337e9ca049ab5"
+  },
+  "term": "dw",
+  "name": "delete word",
+  "description": "удаляет слово под курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5b09d337e9ca049ab6"
+  },
+  "term": "ciw",
+  "name": "change inner word",
+  "description": "заменяет внутреннее содержимое слова",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5b09d337e9ca049ab7"
+  },
+  "term": "diw",
+  "name": "delete inner word",
+  "description": "удаляет внутреннее содержимое слова",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5b09d337e9ca049ab8"
+  },
+  "term": "y",
+  "name": "yank",
+  "description": "копирует выделенный текст",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5b09d337e9ca049ab9"
+  },
+  "term": "c",
+  "name": "change",
+  "description": "заменяет выделенный текст",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049aba"
+  },
+  "term": "d",
+  "name": "delete",
+  "description": "удаляет выделенный текст",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049abb"
+  },
+  "term": "V",
+  "name": "visual line mode",
+  "description": "переход в режим визуальной строки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049abc"
+  },
+  "term": "Ctrl+v",
+  "name": "visual block mode",
+  "description": "переход в режим визуального блока",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049abd"
+  },
+  "term": ":x",
+  "name": "save and quit",
+  "description": "сохраняет файл и выходит из Vim",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049abe"
+  },
+  "term": ":qa",
+  "name": "quit all",
+  "description": "закрывает все открытые файлы и выходит из Vim",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049abf"
+  },
+  "term": ":qa!",
+  "name": "force quit all",
+  "description": "закрывает все открытые файлы без сохранения и выходит из Vim",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049ac0"
+  },
+  "term": ":!command",
+  "name": "execute shell command",
+  "description": "выполняет команду оболочки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049ac1"
+  },
+  "term": ":r",
+  "name": "read file",
+  "description": "вставляет содержимое файла в текущий буфер",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049ac2"
+  },
+  "term": ":s",
+  "name": "substitute",
+  "description": "заменяет текст в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049ac3"
+  },
+  "term": ":%s",
+  "name": "global substitute",
+  "description": "заменяет текст во всём файле",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049ac4"
+  },
+  "term": ":noh",
+  "name": "no highlight",
+  "description": "отменяет подсветку поиска",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5c09d337e9ca049ac5"
+  },
+  "term": ":set hlsearch",
+  "name": "highlight search",
+  "description": "включает подсветку поиска",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5d09d337e9ca049ac6"
+  },
+  "term": ":set nohlsearch",
+  "name": "no highlight search",
+  "description": "выключает подсветку поиска",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5d09d337e9ca049ac7"
+  },
+  "term": ":set ic",
+  "name": "ignore case",
+  "description": "игнорирует регистр при поиске",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5d09d337e9ca049ac8"
+  },
+  "term": ":set noic",
+  "name": "no ignore case",
+  "description": "учитывает регистр при поиске",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5d09d337e9ca049ac9"
+  },
+  "term": ":set ai",
+  "name": "auto indent",
+  "description": "включает автоматическое выравнивание",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68a5d09d337e9ca049aca"
+  },
+  "term": ":set noai",
+  "name": "no auto indent",
+  "description": "выключает автоматическое выравнивание",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049acb"
+  },
+  "term": ":set ts",
+  "name": "set tab stop",
+  "description": "устанавливает количество пробелов для табуляции",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049acc"
+  },
+  "term": ":set sw",
+  "name": "set shift width",
+  "description": "устанавливает количество пробелов для отступа",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049acd"
+  },
+  "term": ":set expandtab",
+  "name": "expand tab",
+  "description": "заменяет табуляции пробелами",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049ace"
+  },
+  "term": ":set noexpandtab",
+  "name": "no expand tab",
+  "description": "не заменяет табуляции пробелами",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049acf"
+  },
+  "term": ":set number",
+  "name": "show line numbers",
+  "description": "включает отображение номеров строк",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049ad0"
+  },
+  "term": ":set nonumber",
+  "name": "hide line numbers",
+  "description": "выключает отображение номеров строк",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049ad1"
+  },
+  "term": ":set cursorline",
+  "name": "highlight cursor line",
+  "description": "подсвечивает строку с курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049ad2"
+  },
+  "term": ":set nocursorline",
+  "name": "no highlight cursor line",
+  "description": "не подсвечивает строку с курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ace09d337e9ca049ad3"
+  },
+  "term": ":set cursorcolumn",
+  "name": "highlight cursor column",
+  "description": "подсвечивает столбец с курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ad4"
+  },
+  "term": ":set nocursorcolumn",
+  "name": "no highlight cursor column",
+  "description": "не подсвечивает столбец с курсором",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ad5"
+  },
+  "term": ":set wrap",
+  "name": "wrap lines",
+  "description": "включает перенос строк",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ad6"
+  },
+  "term": ":set nowrap",
+  "name": "no wrap lines",
+  "description": "выключает перенос строк",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ad7"
+  },
+  "term": ":set spell",
+  "name": "spell check",
+  "description": "включает проверку орфографии",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ad8"
+  },
+  "term": ":set nospell",
+  "name": "no spell check",
+  "description": "выключает проверку орфографии",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ad9"
+  },
+  "term": ":set list",
+  "name": "show invisible characters",
+  "description": "отображает невидимые символы",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ada"
+  },
+  "term": ":set nolist",
+  "name": "hide invisible characters",
+  "description": "скрывает невидимые символы",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049adb"
+  },
+  "term": ":set showcmd",
+  "name": "show command",
+  "description": "показывает вводимые команды",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049adc"
+  },
+  "term": ":set noshowcmd",
+  "name": "no show command",
+  "description": "не показывает вводимые команды",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049add"
+  },
+  "term": ":set ruler",
+  "name": "show ruler",
+  "description": "показывает текущую позицию курсора",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049ade"
+  },
+  "term": ":set noruler",
+  "name": "no show ruler",
+  "description": "не показывает текущую позицию курсора",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68acf09d337e9ca049adf"
+  },
+  "term": ":set wildmenu",
+  "name": "wild menu",
+  "description": "включает визуальное меню автодополнения команд",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ad009d337e9ca049ae0"
+  },
+  "term": ":set nowildmenu",
+  "name": "no wild menu",
+  "description": "выключает визуальное меню автодополнения команд",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68ad009d337e9ca049ae1"
+  },
+  "term": ":%d",
+  "name": "delete all lines",
+  "description": "удаляет все строки в файле",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b0f09d337e9ca049ae2"
+  },
+  "term": ":vsplit",
+  "name": "vertical split",
+  "description": "разделяет окно редактора вертикально",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b0f09d337e9ca049ae3"
+  },
+  "term": ":split",
+  "name": "horizontal split",
+  "description": "разделяет окно редактора горизонтально",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b0f09d337e9ca049ae4"
+  },
+  "term": "Ctrl+w h",
+  "name": "move to left window",
+  "description": "перемещает курсор в левое окно",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b0f09d337e9ca049ae5"
+  },
+  "term": "Ctrl+w j",
+  "name": "move to lower window",
+  "description": "перемещает курсор в нижнее окно",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049ae7"
+  },
+  "term": "Ctrl+w l",
+  "name": "move to right window",
+  "description": "перемещает курсор в правое окно",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049ae8"
+  },
+  "term": ":tabnew",
+  "name": "new tab",
+  "description": "открывает новый файл в новой вкладке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049ae9"
+  },
+  "term": ":tabnext",
+  "name": "next tab",
+  "description": "переключается на следующую вкладку",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049aea"
+  },
+  "term": ":tabprev",
+  "name": "previous tab",
+  "description": "переключается на предыдущую вкладку",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049aeb"
+  },
+  "term": ":tabclose",
+  "name": "close tab",
+  "description": "закрывает текущую вкладку",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049aec"
+  },
+  "term": ":tabonly",
+  "name": "close other tabs",
+  "description": "закрывает все вкладки, кроме текущей",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049aed"
+  },
+  "term": ":mksession",
+  "name": "make session",
+  "description": "сохраняет текущую сессию",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049aee"
+  },
+  "term": ":source",
+  "name": "source file",
+  "description": "выполняет команды из файла",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049aef"
+  },
+  "term": ":reg",
+  "name": "show registers",
+  "description": "показывает содержимое регистров",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049af0"
+  },
+  "term": ":marks",
+  "name": "show marks",
+  "description": "показывает все закладки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049af1"
+  },
+  "term": ":nohlsearch",
+  "name": "no highlight search",
+  "description": "отключает подсветку поиска",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049af2"
+  },
+  "term": ":syntax on",
+  "name": "syntax on",
+  "description": "включает подсветку синтаксиса",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1009d337e9ca049af3"
+  },
+  "term": ":syntax off",
+  "name": "syntax off",
+  "description": "выключает подсветку синтаксиса",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1109d337e9ca049af4"
+  },
+  "term": ":set background=dark",
+  "name": "set dark background",
+  "description": "устанавливает тёмный фон",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1109d337e9ca049af5"
+  },
+  "term": ":set background=light",
+  "name": "set light background",
+  "description": "устанавливает светлый фон",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1109d337e9ca049af6"
+  },
+  "term": ":set spelllang",
+  "name": "set spell language",
+  "description": "устанавливает язык проверки орфографии",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b1109d337e9ca049af7"
+  },
+  "term": ":set fileencoding",
+  "name": "set file encoding",
+  "description": "устанавливает кодировку файла",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049af8"
+  },
+  "term": "s",
+  "name": "substitute",
+  "description": "заменяет символ под курсором и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049af9"
+  },
+  "term": "S",
+  "name": "substitute line",
+  "description": "заменяет всю строку и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049afa"
+  },
+  "term": "D",
+  "name": "delete to end of line",
+  "description": "удаляет текст от курсора до конца строки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049afb"
+  },
+  "term": "f",
+  "name": "find",
+  "description": "находит следующий символ в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049afc"
+  },
+  "term": "F",
+  "name": "find backwards",
+  "description": "находит предыдущий символ в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049afd"
+  },
+  "term": "af",
+  "name": "a function",
+  "description": "выделяет всю функцию",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049aff"
+  },
+  "term": "ap",
+  "name": "a paragraph",
+  "description": "выделяет весь абзац",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049b00"
+  },
+  "term": "df",
+  "name": "delete to character",
+  "description": "удаляет текст до указанного символа",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7009d337e9ca049b01"
+  },
+  "term": "dt",
+  "name": "delete till character",
+  "description": "удаляет текст до указанного символа, не включая его",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b03"
+  },
+  "term": "di",
+  "name": "delete inner",
+  "description": "удаляет внутренний блок текста",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b04"
+  },
+  "term": "fa",
+  "name": "find a",
+  "description": "находит первый символ 'a' в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b05"
+  },
+  "term": "fs",
+  "name": "find s",
+  "description": "находит первый символ 's' в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b06"
+  },
+  "term": "fd",
+  "name": "find d",
+  "description": "находит первый символ 'd' в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b07"
+  },
+  "term": "ff",
+  "name": "find f",
+  "description": "находит первый символ 'f' в строке",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b08"
+  },
+  "term": "sa",
+  "name": "substitute a",
+  "description": "заменяет символ 'a' под курсором и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b09"
+  },
+  "term": "sd",
+  "name": "substitute d",
+  "description": "заменяет символ 'd' под курсором и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b0a"
+  },
+  "term": "sf",
+  "name": "substitute f",
+  "description": "заменяет символ 'f' под курсором и переходит в режим вставки",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68b7109d337e9ca049b0b"
+  },
+  "term": "ad",
+  "name": "append d",
+  "description": "вставляет текст после символа 'd'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68bb209d337e9ca049b0c"
+  },
+  "term": "aa",
+  "name": "append after",
+  "description": "вставляет текст после символа 'a'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68bb209d337e9ca049b0d"
+  },
+  "term": "ca",
+  "name": "change around",
+  "description": "заменяет текст вокруг символа 'a'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68bb209d337e9ca049b0e"
+  },
+  "term": "cs",
+  "name": "change around s",
+  "description": "заменяет текст вокруг символа 's'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68bb209d337e9ca049b0f"
+  },
+  "term": "cd",
+  "name": "change around d",
+  "description": "заменяет текст вокруг символа 'd'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68bb209d337e9ca049b10"
+  },
+  "term": "cf",
+  "name": "change around f",
+  "description": "заменяет текст вокруг символа 'f'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68bb209d337e9ca049b11"
+  },
+  "term": "ds",
+  "name": "delete around s",
+  "description": "удаляет текст вокруг символа 's'",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66a68c6909d337e9ca049b12"
+  },
+  "term": "struct",
+  "name": "структура",
+  "description": "это пользовательский тип данных, который позволяет объединить данные разных типов в единую логическую сущность. Структуры используются для создания сложных типов данных на основе более простых типов, таких как числа, строки и другие структуры.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6909d337e9ca049b13"
+  },
+  "term": "func",
+  "name": "функция",
+  "description": "это набор инструкций, который выполняет определенное действие и может быть вызван из других частей программы. Функции позволяют разбивать код на более мелкие, управляемые части.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6909d337e9ca049b14"
+  },
+  "term": "interface",
+  "name": "интерфейс",
+  "description": "это тип, который определяет набор методов, но не реализует их. Он используется для определения поведения, которое должны реализовать другие типы.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6909d337e9ca049b15"
+  },
+  "term": "package",
+  "name": "пакет",
+  "description": "это способ организации и управления кодом в Go. Пакеты позволяют группировать связанные функции, типы и переменные.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6909d337e9ca049b16"
+  },
+  "term": "import",
+  "name": "импорт",
+  "description": "оператор, который используется для включения пакетов в текущий файл. Он позволяет использовать функции и типы из других пакетов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6909d337e9ca049b17"
+  },
+  "term": "var",
+  "name": "переменная",
+  "description": "оператор, который используется для объявления переменных в Go. Переменные могут хранить значения различных типов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b18"
+  },
+  "term": "const",
+  "name": "константа",
+  "description": "это значение, которое не может быть изменено после его объявления. Константы используются для хранения фиксированных значений.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b19"
+  },
+  "term": "for",
+  "name": "цикл for",
+  "description": "это оператор, который используется для повторения набора инструкций определенное количество раз. В Go цикл for также может использоваться как цикл while.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b1a"
+  },
+  "term": "if",
+  "name": "условие if",
+  "description": "это оператор, который используется для выполнения кода только если определенное условие истинно.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b1b"
+  },
+  "term": "switch",
+  "name": "оператор switch",
+  "description": "это оператор, который используется для выбора одного из нескольких блоков кода для выполнения на основе значения переменной.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b1c"
+  },
+  "term": "defer",
+  "name": "отложенное выполнение",
+  "description": "это оператор, который используется для откладывания выполнения функции до тех пор, пока не завершится выполнение окружающей функции.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b1d"
+  },
+  "term": "go",
+  "name": "горутина",
+  "description": "это легковесный поток, который позволяет выполнять функции параллельно. Горутины используются для создания конкурентных программ.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b1e"
+  },
+  "term": "channel",
+  "name": "канал",
+  "description": "это средство связи между горутинами, которое позволяет им обмениваться данными. Каналы обеспечивают безопасный обмен данными между горутинами.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b1f"
+  },
+  "term": "select",
+  "name": "оператор select",
+  "description": "это оператор, который используется для работы с несколькими каналами одновременно. Он позволяет горутине ждать на множестве операций каналов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b20"
+  },
+  "term": "map",
+  "name": "хэш-таблица",
+  "description": "это структура данных, которая используется для хранения пар ключ-значение. Карты позволяют быстро находить значения по их ключам.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68c6a09d337e9ca049b21"
+  },
+  "term": "slice",
+  "name": "срез",
+  "description": "это динамический массив, который может изменять свой размер. Срезы являются гибким и мощным инструментом для работы с последовательностями данных.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cde09d337e9ca049b22"
+  },
+  "term": "range",
+  "name": "диапазон",
+  "description": "это ключевое слово, которое используется в цикле for для итерации по элементам массива, среза, карты, строки или канала.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cde09d337e9ca049b23"
+  },
+  "term": "type",
+  "name": "тип",
+  "description": "это ключевое слово, которое используется для объявления новых типов данных, таких как структуры, интерфейсы и другие пользовательские типы.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cde09d337e9ca049b24"
+  },
+  "term": "make",
+  "name": "создать",
+  "description": "это встроенная функция, которая используется для создания и инициализации срезов, карт и каналов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cde09d337e9ca049b25"
+  },
+  "term": "new",
+  "name": "новый",
+  "description": "это встроенная функция, которая выделяет память и возвращает указатель на нулевое значение указанного типа.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cde09d337e9ca049b26"
+  },
+  "term": "len",
+  "name": "длина",
+  "description": "это встроенная функция, которая возвращает длину массива, среза, карты или строки.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cde09d337e9ca049b27"
+  },
+  "term": "cap",
+  "name": "вместимость",
+  "description": "это встроенная функция, которая возвращает вместимость среза или массива.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b28"
+  },
+  "term": "append",
+  "name": "добавить",
+  "description": "это встроенная функция, которая добавляет элементы в срез и возвращает новый срез.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b29"
+  },
+  "term": "copy",
+  "name": "копировать",
+  "description": "это встроенная функция, которая копирует элементы из одного среза в другой и возвращает количество скопированных элементов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b2a"
+  },
+  "term": "close",
+  "name": "закрыть",
+  "description": "это встроенная функция, которая закрывает канал, чтобы больше не отправлять значения в него.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b2b"
+  },
+  "term": "panic",
+  "name": "паника",
+  "description": "это встроенная функция, которая вызывает ошибку выполнения и останавливает нормальное выполнение программы.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b2c"
+  },
+  "term": "recover",
+  "name": "восстановить",
+  "description": "это встроенная функция, которая используется для восстановления после паники и продолжения выполнения программы.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b2d"
+  },
+  "term": "fmt",
+  "name": "форматирование",
+  "description": "это пакет, который предоставляет функции для форматированного ввода-вывода, такие как Printf, Sprintf и другие.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b2e"
+  },
+  "term": "log",
+  "name": "логирование",
+  "description": "это пакет, который предоставляет функции для записи логов, такие как Println, Fatal и другие.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b2f"
+  },
+  "term": "http",
+  "name": "HTTP",
+  "description": "это пакет, который предоставляет функции для работы с HTTP-запросами и ответами, такие как Get, Post и другие.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b30"
+  },
+  "term": "json",
+  "name": "JSON",
+  "description": "это пакет, который предоставляет функции для работы с JSON-данными, такие как Marshal, Unmarshal и другие.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b31"
+  },
+  "term": "go build",
+  "name": "сборка",
+  "description": "это команда, которая компилирует исходный код программы и создает исполняемый файл.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b32"
+  },
+  "term": "go run",
+  "name": "запуск",
+  "description": "это команда, которая компилирует и сразу запускает исходный код программы.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68cdf09d337e9ca049b33"
+  },
+  "term": "go test",
+  "name": "тестирование",
+  "description": "это команда, которая запускает тесты, написанные для программы.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0b09d337e9ca049b34"
+  },
+  "term": "go fmt",
+  "name": "форматирование кода",
+  "description": "это команда, которая автоматически форматирует исходный код программы в соответствии с принятыми стилями Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0b09d337e9ca049b35"
+  },
+  "term": "go get",
+  "name": "загрузка пакетов",
+  "description": "это команда, которая загружает и устанавливает удаленные пакеты и их зависимости.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0b09d337e9ca049b36"
+  },
+  "term": "go install",
+  "name": "установка пакетов",
+  "description": "это команда, которая компилирует и устанавливает пакеты в рабочее пространство Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0b09d337e9ca049b37"
+  },
+  "term": "go mod",
+  "name": "модули",
+  "description": "это команда, которая управляет зависимостями и версиями модулей в проекте Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b38"
+  },
+  "term": "go mod init",
+  "name": "инициализация модуля",
+  "description": "это команда, которая создает новый модуль и файл go.mod в текущем каталоге.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b39"
+  },
+  "term": "go mod tidy",
+  "name": "упорядочение модулей",
+  "description": "это команда, которая удаляет ненужные зависимости и добавляет недостающие зависимости в файл go.mod.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b3a"
+  },
+  "term": "go mod vendor",
+  "name": "создание каталога vendor",
+  "description": "это команда, которая копирует все зависимости проекта в каталог vendor.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b3b"
+  },
+  "term": "go mod verify",
+  "name": "проверка модулей",
+  "description": "это команда, которая проверяет целостность всех загруженных модулей.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b3c"
+  },
+  "term": "go mod graph",
+  "name": "граф зависимостей",
+  "description": "это команда, которая выводит граф зависимостей модулей.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b3d"
+  },
+  "term": "go clean",
+  "name": "очистка",
+  "description": "это команда, которая удаляет временные файлы, созданные во время сборки.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b3e"
+  },
+  "term": "go env",
+  "name": "переменные окружения",
+  "description": "это команда, которая выводит или устанавливает переменные окружения для Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b3f"
+  },
+  "term": "go list",
+  "name": "список пакетов",
+  "description": "это команда, которая выводит список установленных пакетов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0c09d337e9ca049b40"
+  },
+  "term": "go doc",
+  "name": "документация",
+  "description": "это команда, которая выводит документацию для пакетов и их элементов.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0d09d337e9ca049b41"
+  },
+  "term": "go tool",
+  "name": "инструменты",
+  "description": "это команда, которая запускает указанные инструменты разработки Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0d09d337e9ca049b42"
+  },
+  "term": "go version",
+  "name": "версия Go",
+  "description": "это команда, которая выводит текущую версию Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0d09d337e9ca049b43"
+  },
+  "term": "go help",
+  "name": "помощь",
+  "description": "это команда, которая выводит справочную информацию о командах Go.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0d09d337e9ca049b44"
+  },
+  "term": "go build -o",
+  "name": "сборка с указанием имени файла",
+  "description": "это команда, которая компилирует исходный код и создает исполняемый файл с указанным именем.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a68d0d09d337e9ca049b45"
+  },
+  "term": "go test -v",
+  "name": "подробное тестирование",
+  "description": "это команда, которая запускает тесты с подробным выводом информации.",
+  "theme": "golang"
+},
+{
+  "_id": {
+    "$oid": "66a77220fe4fbcd0255b74a2"
+  },
+  "term": "ls",
+  "name": "список файлов",
+  "description": "Команда для отображения списка файлов и директорий в текущем каталоге.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a3"
+  },
+  "term": "pwd",
+  "name": "текущая директория",
+  "description": "Команда для вывода пути текущей рабочей директории.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a4"
+  },
+  "term": "cp",
+  "name": "копирование файлов",
+  "description": "Команда для копирования файлов и директорий.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a5"
+  },
+  "term": "mv",
+  "name": "перемещение файлов",
+  "description": "Команда для перемещения или переименования файлов и директорий.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a6"
+  },
+  "term": "rm",
+  "name": "удаление файлов",
+  "description": "Команда для удаления файлов и директорий.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a7"
+  },
+  "term": "mkdir",
+  "name": "создание директории",
+  "description": "Команда для создания новой директории.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a8"
+  },
+  "term": "rmdir",
+  "name": "удаление директории",
+  "description": "Команда для удаления пустых директорий.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74a9"
+  },
+  "term": "touch",
+  "name": "создание файла",
+  "description": "Команда для создания пустого файла или обновления временных меток существующего файла.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74aa"
+  },
+  "term": "cat",
+  "name": "просмотр содержимого файла",
+  "description": "Команда для вывода содержимого файла на стандартный вывод.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74ab"
+  },
+  "term": "echo",
+  "name": "вывод строки",
+  "description": "Команда для вывода строки текста на стандартный вывод.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77221fe4fbcd0255b74ac"
+  },
+  "term": "man",
+  "name": "руководство по командам",
+  "description": "Команда для отображения руководства по использованию других команд.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74ad"
+  },
+  "term": "chmod",
+  "name": "изменение прав доступа",
+  "description": "Команда для изменения прав доступа к файлам и директориям.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74ae"
+  },
+  "term": "chown",
+  "name": "изменение владельца",
+  "description": "Команда для изменения владельца и группы файла или директории.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74af"
+  },
+  "term": "find",
+  "name": "поиск файлов",
+  "description": "Команда для поиска файлов и директорий по заданным критериям.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74b0"
+  },
+  "term": "grep",
+  "name": "поиск по содержимому",
+  "description": "Команда для поиска строк, соответствующих заданному шаблону, в файлах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74b1"
+  },
+  "term": "ps",
+  "name": "процессы",
+  "description": "Команда для отображения информации о текущих процессах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74b2"
+  },
+  "term": "kill",
+  "name": "завершение процесса",
+  "description": "Команда для отправки сигнала завершения процессу.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74b3"
+  },
+  "term": "top",
+  "name": "мониторинг системы",
+  "description": "Команда для отображения информации о текущих процессах и использовании системы в реальном времени.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77222fe4fbcd0255b74b4"
+  },
+  "term": "du",
+  "name": "использование диска",
+  "description": "Команда для отображения информации о размере файлов и директорий.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a7774ffe4fbcd0255b74b5"
+  },
+  "term": "tar",
+  "name": "архивация файлов",
+  "description": "Команда для создания и извлечения архивов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a7774ffe4fbcd0255b74b6"
+  },
+  "term": "gzip",
+  "name": "сжатие файлов",
+  "description": "Команда для сжатия файлов с использованием алгоритма gzip.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a7774ffe4fbcd0255b74b7"
+  },
+  "term": "gunzip",
+  "name": "распаковка файлов",
+  "description": "Команда для распаковки файлов, сжатых с использованием алгоритма gzip.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a7774ffe4fbcd0255b74b8"
+  },
+  "term": "zip",
+  "name": "архивация и сжатие",
+  "description": "Команда для создания zip-архивов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a7774ffe4fbcd0255b74b9"
+  },
+  "term": "unzip",
+  "name": "распаковка zip-архивов",
+  "description": "Команда для распаковки zip-архивов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a7774ffe4fbcd0255b74ba"
+  },
+  "term": "ssh",
+  "name": "безопасный доступ к удаленному серверу",
+  "description": "Команда для подключения к удаленному серверу по протоколу SSH.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74bb"
+  },
+  "term": "scp",
+  "name": "безопасное копирование файлов",
+  "description": "Команда для копирования файлов между хостами по протоколу SSH.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74bc"
+  },
+  "term": "wget",
+  "name": "загрузка файлов",
+  "description": "Команда для загрузки файлов из интернета.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74bd"
+  },
+  "term": "curl",
+  "name": "передача данных",
+  "description": "Команда для передачи данных с использованием различных протоколов, таких как HTTP, FTP.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74be"
+  },
+  "term": "apt-get",
+  "name": "управление пакетами",
+  "description": "Команда для установки, обновления и удаления пакетов в системах на базе Debian.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74bf"
+  },
+  "term": "yum",
+  "name": "управление пакетами",
+  "description": "Команда для установки, обновления и удаления пакетов в системах на базе Red Hat.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c0"
+  },
+  "term": "systemctl",
+  "name": "управление сервисами",
+  "description": "Команда для управления системными сервисами в системах с systemd.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c1"
+  },
+  "term": "journalctl",
+  "name": "просмотр журналов",
+  "description": "Команда для просмотра журналов systemd.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c2"
+  },
+  "term": "ping",
+  "name": "проверка доступности",
+  "description": "Команда для проверки доступности узла в сети.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c3"
+  },
+  "term": "netstat",
+  "name": "сетевые соединения",
+  "description": "Команда для отображения сетевых соединений, таблиц маршрутизации и статистики интерфейсов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c4"
+  },
+  "term": "ifconfig",
+  "name": "конфигурация сетевых интерфейсов",
+  "description": "Команда для конфигурации сетевых интерфейсов. (Замещена на ip в современных системах)",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c5"
+  },
+  "term": "ip",
+  "name": "управление сетевыми интерфейсами",
+  "description": "Команда для управления сетевыми интерфейсами, маршрутизацией и туннелями.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c6"
+  },
+  "term": "hostname",
+  "name": "имя хоста",
+  "description": "Команда для отображения или установки имени хоста системы.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c7"
+  },
+  "term": "uptime",
+  "name": "время работы системы",
+  "description": "Команда для отображения времени работы системы с момента последней перезагрузки.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66a77750fe4fbcd0255b74c8"
+  },
+  "term": "date",
+  "name": "дата и время",
+  "description": "Команда для отображения или установки текущей даты и времени.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa006bc8e4a655e73f8fc7"
+  },
+  "term": "cd",
+  "name": "смена директории",
+  "description": "Команда для смены текущей рабочей директории.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa006bc8e4a655e73f8fc8"
+  },
+  "term": "less",
+  "name": "постраничный просмотр",
+  "description": "Команда для постраничного просмотра содержимого файлов с возможностью перемещения вперёд и назад, а также расширенными функциями поиска и навигации.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa006bc8e4a655e73f8fc9"
+  },
+  "term": "more",
+  "name": "постраничный просмотр",
+  "description": "Команда для постраничного просмотра содержимого файлов с ограниченной функциональностью и возможностью перемещения только вперёд.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa006bc8e4a655e73f8fca"
+  },
+  "term": "head",
+  "name": "начало файла",
+  "description": "Команда для отображения первых строк файла.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa006bc8e4a655e73f8fcb"
+  },
+  "term": "tail",
+  "name": "конец файла",
+  "description": "Команда для отображения последних строк файла.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa006cc8e4a655e73f8fcc"
+  },
+  "term": "df",
+  "name": "свободное место на диске",
+  "description": "Команда для отображения информации о свободном и занятом месте на диске.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00b6c8e4a655e73f8fcd"
+  },
+  "term": "killall",
+  "name": "завершение процессов по имени",
+  "description": "Команда для завершения всех процессов с указанным именем.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00b6c8e4a655e73f8fce"
+  },
+  "term": "nano",
+  "name": "текстовый редактор",
+  "description": "Простой текстовый редактор в командной строке.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00b6c8e4a655e73f8fcf"
+  },
+  "term": "vim",
+  "name": "текстовый редактор",
+  "description": "Мощный текстовый редактор в командной строке.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00b6c8e4a655e73f8fd1"
+  },
+  "term": "pacman",
+  "name": "управление пакетами",
+  "description": "Команда для управления пакетами в дистрибутивах Arch Linux.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00b7c8e4a655e73f8fd3"
+  },
+  "term": "service",
+  "name": "управление сервисами",
+  "description": "Команда для управления системными сервисами.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f6c8e4a655e73f8fd4"
+  },
+  "term": "ss",
+  "name": "сетевые сокеты",
+  "description": "Команда для отображения информации о сетевых сокетах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fd5"
+  },
+  "term": "iptables",
+  "name": "управление брандмауэром",
+  "description": "Команда для настройки правил брандмауэра.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fd6"
+  },
+  "term": "ufw",
+  "name": "управление брандмауэром",
+  "description": "Простой интерфейс для управления брандмауэром.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fd7"
+  },
+  "term": "firewalld",
+  "name": "управление брандмауэром",
+  "description": "Динамическое управление брандмауэром с поддержкой зон.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fd8"
+  },
+  "term": "mount",
+  "name": "монтирование файловых систем",
+  "description": "Команда для монтирования файловых систем.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fd9"
+  },
+  "term": "umount",
+  "name": "размонтирование файловых систем",
+  "description": "Команда для размонтирования файловых систем.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fda"
+  },
+  "term": "fdisk",
+  "name": "управление разделами",
+  "description": "Команда для управления разделами дисков.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fdb"
+  },
+  "term": "mkfs",
+  "name": "создание файловой системы",
+  "description": "Команда для создания новой файловой системы на разделе.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fdc"
+  },
+  "term": "fsck",
+  "name": "проверка файловой системы",
+  "description": "Команда для проверки и исправления ошибок файловой системы.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fdd"
+  },
+  "term": "blkid",
+  "name": "идентификация блочных устройств",
+  "description": "Команда для отображения информации о блочных устройствах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fde"
+  },
+  "term": "lsblk",
+  "name": "список блочных устройств",
+  "description": "Команда для отображения информации о блочных устройствах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fdf"
+  },
+  "term": "parted",
+  "name": "управление разделами",
+  "description": "Команда для управления разделами дисков.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa00f7c8e4a655e73f8fe0"
+  },
+  "term": "dd",
+  "name": "копирование данных",
+  "description": "Команда для низкоуровневого копирования данных.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013bc8e4a655e73f8fe9"
+  },
+  "term": "locate",
+  "name": "поиск файлов",
+  "description": "Команда для поиска файлов по базе данных.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013bc8e4a655e73f8fea"
+  },
+  "term": "updatedb",
+  "name": "обновление базы данных",
+  "description": "Команда для обновления базы данных для команды locate.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013bc8e4a655e73f8feb"
+  },
+  "term": "info",
+  "name": "справочник",
+  "description": "Команда для отображения подробной справочной информации о командах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013bc8e4a655e73f8fec"
+  },
+  "term": "alias",
+  "name": "создание псевдонимов",
+  "description": "Команда для создания псевдонимов для других команд.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013bc8e4a655e73f8fed"
+  },
+  "term": "unalias",
+  "name": "удаление псевдонимов",
+  "description": "Команда для удаления псевдонимов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013cc8e4a655e73f8fee"
+  },
+  "term": "cal",
+  "name": "календарь",
+  "description": "Команда для отображения календаря.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013cc8e4a655e73f8fef"
+  },
+  "term": "whoami",
+  "name": "текущий пользователь",
+  "description": "Команда для отображения имени текущего пользователя.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013cc8e4a655e73f8ff0"
+  },
+  "term": "uname",
+  "name": "информация о системе",
+  "description": "Команда для отображения информации о системе.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013cc8e4a655e73f8ff1"
+  },
+  "term": "dmesg",
+  "name": "сообщения ядра",
+  "description": "Команда для отображения сообщений ядра.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa013cc8e4a655e73f8ff2"
+  },
+  "term": "free",
+  "name": "свободная память",
+  "description": "Команда для отображения информации о свободной и используемой памяти.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff3"
+  },
+  "term": "vmstat",
+  "name": "статистика памяти",
+  "description": "Команда для отображения статистики виртуальной памяти.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff4"
+  },
+  "term": "iostat",
+  "name": "статистика ввода-вывода",
+  "description": "Команда для отображения статистики ввода-вывода.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff5"
+  },
+  "term": "sar",
+  "name": "системная активность",
+  "description": "Команда для сбора, отчета и сохранения информации о системной активности.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff6"
+  },
+  "term": "mpstat",
+  "name": "статистика процессоров",
+  "description": "Команда для отображения статистики использования процессоров.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff7"
+  },
+  "term": "pidstat",
+  "name": "статистика процессов",
+  "description": "Команда для отображения статистики использования ресурсов процессами.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff8"
+  },
+  "term": "strace",
+  "name": "трассировка системных вызовов",
+  "description": "Команда для трассировки системных вызовов и сигналов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ff9"
+  },
+  "term": "lsof",
+  "name": "открытые файлы",
+  "description": "Команда для отображения списка открытых файлов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018bc8e4a655e73f8ffa"
+  },
+  "term": "htop",
+  "name": "интерактивный мониторинг процессов",
+  "description": "Команда для интерактивного мониторинга процессов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018cc8e4a655e73f8ffb"
+  },
+  "term": "ncdu",
+  "name": "анализ использования диска",
+  "description": "Команда для анализа использования дискового пространства с текстовым интерфейсом.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018cc8e4a655e73f8ffc"
+  },
+  "term": "nc",
+  "name": "сетевые соединения",
+  "description": "Команда для работы с сетевыми соединениями.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018cc8e4a655e73f8ffd"
+  },
+  "term": "rsync",
+  "name": "синхронизация файлов",
+  "description": "Команда для синхронизации файлов и директорий.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018cc8e4a655e73f8ffe"
+  },
+  "term": "ftp",
+  "name": "передача файлов",
+  "description": "Команда для передачи файлов по протоколу FTP.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa018cc8e4a655e73f8fff"
+  },
+  "term": "sftp",
+  "name": "безопасная передача файлов",
+  "description": "Команда для безопасной передачи файлов по протоколу SSH.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01c9c8e4a655e73f9000"
+  },
+  "term": "traceroute",
+  "name": "трассировка маршрута",
+  "description": "Команда для отображения маршрута пакетов до удаленного узла.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9001"
+  },
+  "term": "dig",
+  "name": "поиск DNS",
+  "description": "Команда для выполнения запросов DNS с расширенными возможностями и более детализированным выводом.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9002"
+  },
+  "term": "nslookup",
+  "name": "поиск DNS",
+  "description": "Команда для выполнения запросов DNS с простым и удобным интерфейсом, но с меньшим количеством опций.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9003"
+  },
+  "term": "who",
+  "name": "пользователи системы",
+  "description": "Команда для отображения информации о пользователях, вошедших в систему.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9004"
+  },
+  "term": "w",
+  "name": "пользователи и их процессы",
+  "description": "Команда для отображения информации о пользователях, вошедших в систему, и их процессах.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9005"
+  },
+  "term": "last",
+  "name": "история входов",
+  "description": "Команда для отображения истории входов пользователей в систему.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9006"
+  },
+  "term": "history",
+  "name": "история команд",
+  "description": "Команда для отображения истории введенных команд.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9008"
+  },
+  "term": "bc",
+  "name": "калькулятор",
+  "description": "Команда для выполнения арифметических операций.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f9009"
+  },
+  "term": "expr",
+  "name": "выражения",
+  "description": "Команда для вычисления выражений.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cac8e4a655e73f900b"
+  },
+  "term": "seq",
+  "name": "генерация последовательностей",
+  "description": "Команда для генерации числовых последовательностей.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa01cbc8e4a655e73f900c"
+  },
+  "term": "yes",
+  "name": "бесконечный вывод",
+  "description": "Команда для бесконечного повторения заданной строки или 'y' по умолчанию, часто используется для автоматического подтверждения запросов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0214c8e4a655e73f900d"
+  },
+  "term": "tac",
+  "name": "вывод содержимого файла в обратном порядке",
+  "description": "Команда для отображения содержимого файлов в обратном порядке.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0214c8e4a655e73f900e"
+  },
+  "term": "nl",
+  "name": "нумерация строк",
+  "description": "Команда для нумерации строк в файле.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0214c8e4a655e73f900f"
+  },
+  "term": "sort",
+  "name": "сортировка",
+  "description": "Команда для сортировки строк в файле.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0214c8e4a655e73f9010"
+  },
+  "term": "uniq",
+  "name": "удаление дубликатов",
+  "description": "Команда для удаления дубликатов строк в файле.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0214c8e4a655e73f9011"
+  },
+  "term": "wc",
+  "name": "подсчет слов",
+  "description": "Команда для подсчета строк, слов и символов в файле.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0214c8e4a655e73f9012"
+  },
+  "term": "cut",
+  "name": "вырезание полей",
+  "description": "Команда для вырезания полей из строк в файле.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0215c8e4a655e73f9013"
+  },
+  "term": "paste",
+  "name": "объединение строк",
+  "description": "Команда для объединения строк из нескольких файлов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0215c8e4a655e73f9014"
+  },
+  "term": "join",
+  "name": "объединение файлов",
+  "description": "Команда для объединения строк из двух файлов по общему полю.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0215c8e4a655e73f9015"
+  },
+  "term": "comm",
+  "name": "сравнение файлов",
+  "description": "Команда для сравнения двух отсортированных файлов построчно.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0215c8e4a655e73f9016"
+  },
+  "term": "diff",
+  "name": "разница файлов",
+  "description": "Команда для сравнения содержимого двух файлов или каталогов, показывающая различия между ними в удобочитаемом формате.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0215c8e4a655e73f9017"
+  },
+  "term": "patch",
+  "name": "применение патча",
+  "description": "Команда для применения изменений к файлу на основе diff.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0215c8e4a655e73f9018"
+  },
+  "term": "egrep",
+  "name": "расширенный поиск в файлах",
+  "description": "Команда для поиска строк в файлах с использованием расширенных регулярных выражений.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f901a"
+  },
+  "term": "xargs",
+  "name": "построение аргументов",
+  "description": "Команда для построения и выполнения команд из стандартного ввода или вывода другой команды, позволяющая эффективно обрабатывать большие объемы данных.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f901b"
+  },
+  "term": "awk",
+  "name": "обработка текста",
+  "description": "Мощная команда для обработки и анализа текстовых файлов, позволяющая выполнять сложные текстовые манипуляции и извлечение данных с использованием собственного скриптового языка.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f901c"
+  },
+  "term": "sed",
+  "name": "редактирование потоков",
+  "description": "Команда для обработки и преобразования текстовых данных в потоковом режиме, позволяющая выполнять сложные текстовые манипуляции с использованием скриптового языка.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f901d"
+  },
+  "term": "tr",
+  "name": "замена символов",
+  "description": "Команда для замены или удаления символов.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f901e"
+  },
+  "term": "tee",
+  "name": "разветвление вывода",
+  "description": "Команда для чтения из стандартного ввода и записи в стандартный вывод и файлы.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f901f"
+  },
+  "term": "sh",
+  "name": "интерпретатор команд",
+  "description": "Команда для выполнения команд в интерпретаторе команд.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f9020"
+  },
+  "term": "bash",
+  "name": "интерпретатор команд",
+  "description": "Команда для выполнения команд в интерпретаторе команд bash.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f9021"
+  },
+  "term": "zsh",
+  "name": "интерпретатор команд",
+  "description": "Команда для выполнения команд в интерпретаторе команд zsh.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f9023"
+  },
+  "term": "cron",
+  "name": "планировщик задач",
+  "description": "Команда для управления периодическими задачами.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f9024"
+  },
+  "term": "crontab",
+  "name": "таблица задач cron",
+  "description": "Команда для редактирования таблиц задач cron.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f9025"
+  },
+  "term": "at",
+  "name": "запуск задач",
+  "description": "Команда для выполнения задач в определенное время.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025bc8e4a655e73f9026"
+  },
+  "term": "batch",
+  "name": "пакетный режим",
+  "description": "Команда для выполнения задач, когда позволяет уровень загрузки системы.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025cc8e4a655e73f9027"
+  },
+  "term": "bg",
+  "name": "фоновые задачи",
+  "description": "Команда для возобновления выполнения задачи в фоновом режиме.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025cc8e4a655e73f9028"
+  },
+  "term": "fg",
+  "name": "передний план",
+  "description": "Команда для возобновления выполнения задачи в переднем плане.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025cc8e4a655e73f9029"
+  },
+  "term": "jobs",
+  "name": "список задач",
+  "description": "Команда для отображения списка задач.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025cc8e4a655e73f902a"
+  },
+  "term": "pkill",
+  "name": "завершение процессов по шаблону",
+  "description": "Команда для завершения процессов, соответствующих шаблону.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025cc8e4a655e73f902b"
+  },
+  "term": "nohup",
+  "name": "запуск задач без зависимостей",
+  "description": "Команда для запуска задач, которые не будут завершены при выходе из системы.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa025cc8e4a655e73f902c"
+  },
+  "term": "screen",
+  "name": "виртуальные терминалы",
+  "description": "Команда для управления виртуальными терминалами.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66aa0299c8e4a655e73f902d"
+  },
+  "term": "tmux",
+  "name": "мультиплексирование терминалов",
+  "description": "Команда для управления несколькими терминальными сессиями.",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66e57a843cc349f9e35d23c7"
+  },
+  "term": "test",
+  "name": "test форматирование кода",
+  "description": "test это команда, которая автоматически форматирует исходный код программы …",
+  "theme": "vim"
+},
+{
+  "_id": {
+    "$oid": "66e57ac63cc349f9e35d23c8"
+  },
+  "term": "test",
+  "name": "test форматирование кода",
+  "description": "test это команда, которая автоматически форматирует исходный код программы …",
+  "theme": "linux"
+},
+{
+  "_id": {
+    "$oid": "66e57ad03cc349f9e35d23c9"
+  },
+  "term": "test",
+  "name": "test форматирование кода",
+  "description": "test это команда, которая автоматически форматирует исходный код программы …",
+  "theme": "linuxxxx"
+}]
